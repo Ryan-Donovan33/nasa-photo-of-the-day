@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './NasaCard.scss';
 
 export default function NasaCard() {
 	const [ nasaContent, setNasaContent ] = useState({});
@@ -18,9 +19,9 @@ export default function NasaCard() {
 	return (
 		<div className="wrapper">
 			<h1>{nasaContent.title}</h1>
-			<h3>{nasaContent.date}</h3>
+			<h3 id="date">{nasaContent.date}</h3>
 			<img alt={nasaContent.title} src={nasaContent.url} />
-			<h3>{nasaContent.copyright}</h3>
+			{/* <h4>{nasaContent.copyright}</h4> */}
 			<p> {nasaContent.explanation}</p>
 		</div>
 	);
