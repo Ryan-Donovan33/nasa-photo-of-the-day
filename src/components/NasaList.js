@@ -8,11 +8,12 @@ export default function NasaList() {
 		axios
 			.get('https://api.nasa.gov/planetary/apod?api_key=rTMtsft6oB4TOsR50NZYqOwwE03Yd3QlaH9GcZYY')
 			.then((response) => {
-				setFilms(response.data);
-				console.log(response.data);
+				setNasaContent(response.data);
 			})
 			.catch((error) => {
 				console.log('The data is not returning', error);
 			});
 	}, []);
+	console.log(nasaContent);
+	return <div />;
 }
