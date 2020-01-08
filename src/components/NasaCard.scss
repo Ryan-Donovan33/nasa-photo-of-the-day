@@ -4,17 +4,18 @@
 	align-items: center;
 
 	h1 {
-		font-size: 4rem;
+		font-size: 3rem;
 		font-weight: bold;
 	}
 
 	#date {
-		font-size: 2.2rem;
+		font-size: 1.8rem;
 	}
 
 	img {
-		width: 75%;
-		height: 100%;
+		width: 40%;
+		height: 60vh;
+		padding: 2%;
 	}
 	h4 {
 		font-size: 2.5rem;
@@ -23,5 +24,6 @@
 	p {
 		font-size: 1rem;
 		width: 75%;
+		padding: 2%;
 	}
 }
