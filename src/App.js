@@ -1,5 +1,7 @@
 import React from 'react';
 import NasaCard from './components/NasaCard';
+
+import styled, { css } from 'styled-components';
 import './App.css';
 
 function App() {

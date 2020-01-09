@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './NasaCard.scss';
+// import './NasaCard.scss';
+
+import styled, { css } from 'styled-components';
+
+const MainBackground = styled.div`background: blue;`;
 
 export default function NasaCard() {
 	const [ nasaContent, setNasaContent ] = useState({});
@@ -17,12 +21,12 @@ export default function NasaCard() {
 	}, []);
 	console.log(nasaContent);
 	return (
-		<div className="wrapper">
+		<MainBackground className="wrapper">
 			<h1>{nasaContent.title}</h1>
 			<img alt={nasaContent.title} src={nasaContent.url} />
 			<h3 id="date">{nasaContent.date}</h3>
 			{/* <h4>{nasaContent.copyright}</h4> */}
 			<p> {nasaContent.explanation}</p>
-		</div>
+		</MainBackground>
 	);
 }
