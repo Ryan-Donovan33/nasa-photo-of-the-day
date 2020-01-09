@@ -19,8 +19,8 @@ export default function NasaCard() {
 	return (
 		<div className="wrapper">
 			<h1>{nasaContent.title}</h1>
-			<h3 id="date">{nasaContent.date}</h3>
 			<img alt={nasaContent.title} src={nasaContent.url} />
+			<h3 id="date">{nasaContent.date}</h3>
 			{/* <h4>{nasaContent.copyright}</h4> */}
 			<p> {nasaContent.explanation}</p>
 		</div>
