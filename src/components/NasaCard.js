@@ -4,7 +4,36 @@ import axios from 'axios';
 
 import styled, { css } from 'styled-components';
 
-const MainBackground = styled.div`background: green;`;
+const MainBackground = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #23395b;
+`;
+
+const Header1 = styled.h1`
+	font-size: 3rem;
+	color: #8ea8c3;
+	font-weight: bold;
+`;
+
+const Date = styled.h3`
+	font-size: 1.8rem;
+	color: #ddc4dd;
+`;
+
+const Image = styled.img`
+	width: 50%;
+	height: 60vh;
+	padding: 1%;
+`;
+
+const MainText = styled.p`
+	font-size: 1rem;
+	width: 75%;
+	padding: 1%;
+	color: #ddc4dd;
+`;
 
 export default function NasaCard() {
 	const [ nasaContent, setNasaContent ] = useState({});
@@ -22,11 +51,11 @@ export default function NasaCard() {
 	console.log(nasaContent);
 	return (
 		<MainBackground className="wrapper">
-			<h1>{nasaContent.title}</h1>
-			<img alt={nasaContent.title} src={nasaContent.url} />
-			<h3 id="date">{nasaContent.date}</h3>
+			<Header1>{nasaContent.title}</Header1>
+			<Image alt={nasaContent.title} src={nasaContent.url} />
+			<Date id="date">{nasaContent.date}</Date>
 			{/* <h4>{nasaContent.copyright}</h4> */}
-			<p> {nasaContent.explanation}</p>
+			<MainText> {nasaContent.explanation}</MainText>
 		</MainBackground>
 	);
 }
