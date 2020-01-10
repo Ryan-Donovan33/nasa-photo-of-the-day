@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+
 // import './NasaCard.scss';
 
 import styled, { css } from 'styled-components';
@@ -20,11 +21,11 @@ const Header1 = styled.h1`
 const Date = styled.h3`
 	font-size: 1.8rem;
 	color: #ddc4dd;
-	padding: 2%;
+	// padding: 1%;
 `;
 
 const Image = styled.img`
-	width: 70%;
+	width: 50%;
 	height: auto;
 	margin: 1%;
 `;
@@ -34,9 +35,11 @@ const MainText = styled.p`
 	text-align: center;
 	font-size: 1rem;
 	width: 70%;
-	padding: 1%;
+	padding: 2%;
+	margin: 2%;
 	color: #ddc4dd;
 	background-color: #161925;
+	margin: 2%;
 `;
 
 export default function NasaCard() {
@@ -53,11 +56,13 @@ export default function NasaCard() {
 			});
 	}, []);
 	console.log(nasaContent);
+
 	return (
 		<MainBackground className="wrapper">
 			<Header1>{nasaContent.title}</Header1>
 			<Image alt={nasaContent.title} src={nasaContent.url} />
 			<Date id="date">{nasaContent.date}</Date>
+
 			{/* <h4>{nasaContent.copyright}</h4> */}
 			<MainText> {nasaContent.explanation}</MainText>
 		</MainBackground>
