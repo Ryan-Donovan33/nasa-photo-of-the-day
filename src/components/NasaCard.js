@@ -20,19 +20,23 @@ const Header1 = styled.h1`
 const Date = styled.h3`
 	font-size: 1.8rem;
 	color: #ddc4dd;
+	padding: 2%;
 `;
 
 const Image = styled.img`
-	width: 50%;
-	height: 60vh;
-	padding: 1%;
+	width: 70%;
+	height: auto;
+	margin: 1%;
 `;
 
 const MainText = styled.p`
+	display: flex;
+	text-align: center;
 	font-size: 1rem;
-	width: 75%;
+	width: 70%;
 	padding: 1%;
 	color: #ddc4dd;
+	background-color: #161925;
 `;
 
 export default function NasaCard() {
