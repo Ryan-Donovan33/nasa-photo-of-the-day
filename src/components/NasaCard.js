@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import styled, { css } from 'styled-components';
 
-const MainBackground = styled.div`background: blue;`;
+const MainBackground = styled.div`background: green;`;
 
 export default function NasaCard() {
 	const [ nasaContent, setNasaContent ] = useState({});
